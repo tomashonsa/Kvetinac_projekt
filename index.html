@@ -4,11 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="refresh" content="3">
     <title>Kvetinac</title>
+    <style>
+        body {
+            background-color: #a8d5a2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2e7d32;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+    </style>
 </head>
 <body>
     <h1>Květináč</h1>
-    <p>Teplota: <strong>{{teplota}}</strong></p>
-    <p>Vlhkost: <strong>{{vlhkost}}</strong></p>
-    <p>Vlhkost půdy: <strong>{{puda_procenta}}</strong></p>
+        <p>Teplota: <strong>{{teplota}}</strong></p>
+        <p>Vlhkost: <strong>{{vlhkost}}</strong></p>
+        <p>Vlhkost půdy: <strong>{{puda_procenta}}</strong></p>
+    <form action="/pump_on" method="get">
+        <button type="submit">Zalít</button>
+    </form>
 </body>
 </html>
